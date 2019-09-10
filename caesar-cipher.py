@@ -3,7 +3,7 @@ import sys
 ALPHABET = 'abcdefghijklmnopqrstuvxywz'
 KEY = 13
 
-def cypher(message, dir):
+def cipher(message, dir):
   message_temp = ''
   for m in message:
     if m in ALPHABET:
@@ -15,10 +15,10 @@ def cypher(message, dir):
 
 
 def encrypt(message):
-  return cypher(message, 1)
+  return cipher(message, 1)
 
 def decrypt(message):
-  return cypher(message, -1)
+  return cipher(message, -1)
 
 def main():
   command = sys.argv[1].lower()
